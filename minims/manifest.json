@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "Hello World!",
+    "description": "Learning how to make a chrome extension!",
+    "content_script": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "tapa.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ]
+}

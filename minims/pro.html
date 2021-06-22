@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+</head>
+
+<body>
+    <p id="gt"></p>
+
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+    fetch('https://api.covid19api.com/summary').then((apidata) => {
+        console.log(apidata);
+        return apidata.json();
+
+    }).then((actual) => {
+        const trr = actual.Countries[75].Country;
+        document.getElementById('gt').innerHTML = trr;
+    }).catch((error) => {
+        console.log(error);
+    })
+</script>
